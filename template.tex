@@ -196,6 +196,13 @@ of notation,
 \invlim{g} = a^\infty.
 \end{equation}
 \end{exam}
+
+\begin{figure}[h]
+\centering{
+\includegraphics[clip, width=\textwidth]{equality.pdf}}
+\caption{Two \label{abuse} functions $f,g$ with $\invlim{f\cup g}=\invlim{f}\cup\invlim{g}$}
+\end{figure}
+
 \begin{proof}
   It is clear that $\invlim{f}=a^\infty$ and
   also that $a^\infty\in\invlim{g}$.  To prove that $\invlim{f\cup g}=a^\infty$,
@@ -241,6 +248,12 @@ Consider
   inverse limits.
 \end{exam}
 
+\begin{figure}[h]
+\centering{
+\includegraphics[clip, width=\textwidth]{strictly.pdf}}
+\caption{Two \label{strictly} functions $f,g$ with $\invlim{f\cap g}\supset\invlim{f}\cup\invlim{g}$}
+\end{figure}
+
 So when is the union of the inverse limits the same as the inverse
 limit of the union?  Trivially, if we take two functions (or one
 function and a partial function) where one is a subset of the other,
@@ -263,6 +276,20 @@ $\invlim{f}\cup\invlim{g}$ comprises two arcs that intersect at the
 point $0.5^\infty$, whereas $\invlim{f \cup g }$ is a Cantor fan, see
 figure~\ref{cantorfan}.
 \end{exam}
+
+\begin{figure}[h]
+\centering{
+\includegraphics[clip, width=\textwidth]{hilbcross.pdf}}
+\caption{Diagramatic representation of\label{cantorfan} $\invlim{f\cup
+    g}$ with $f,g$ as defined in figure~\ref{strictsuperset} taking the
+  form of a Cantor fan; $\invlim{f}$ and $\invlim{g}$ shown in red}
+\end{figure}
+
+\begin{figure}[h]
+\centering{
+\includegraphics[clip, width=\textwidth]{cross.pdf}}
+\caption{Two \label{strictsuperset} functions $f,g$ with $\invlim{f\cap g}\supset\invlim{f}\cup\invlim{g}$}
+\end{figure}
 
 However, it is possible to construct sets of onto functions for which
 the inverse limit of the union is exactly equal to the union of the
@@ -376,6 +403,16 @@ a,b\left|b^2=1\right.\right\rangle$, in which $a$ may have negative
 power, unlike the inverse limit in which each $b$ is separated by a
 strictly positive power of $a$.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=6in]{drawing.pdf}
+\caption[width=\textwidth]{Diagramatic illustration of 
+  \label{drawing} $\invlim{f}$, where $f(x) = \begin{cases}
+    \lbrace a\rbrace & x\neq b\\
+    \lbrace a,b\rbrace & x=b\\
+    \end{cases}$ for some $a,b\in[0,1]$, $a\neq b$}
+\end{figure}
+
 \newcommand{\fa}{f_{\lbrace a\rbrace}}
 
 \begin{thm}\label{fish}
@@ -440,45 +477,6 @@ might be interesting to consider other properties of functions (for
 example upper or lower semicontinuity) that give information about the
 inverse limit of the union of a function with that property and
 another function.
-
-
-
-
-\begin{figure}[h]
-\centering{
-\includegraphics[clip, width=\textwidth]{equality.pdf}}
-\caption{Two \label{abuse} functions $f,g$ with $\invlim{f\cup g}=\invlim{f}\cup\invlim{g}$}
-\end{figure}
-
-\begin{figure}[h]
-\centering{
-\includegraphics[clip, width=\textwidth]{strictly.pdf}}
-\caption{Two \label{strictly} functions $f,g$ with $\invlim{f\cap g}\supset\invlim{f}\cup\invlim{g}$}
-\end{figure}
-
-\begin{figure}[h]
-\centering{
-\includegraphics[clip, width=\textwidth]{cross.pdf}}
-\caption{Two \label{strictsuperset} functions $f,g$ with $\invlim{f\cap g}\supset\invlim{f}\cup\invlim{g}$}
-\end{figure}
-
-\begin{figure}[h]
-\centering{
-\includegraphics[clip, width=\textwidth]{hilbcross.pdf}}
-\caption{Diagramatic representation of\label{cantorfan} $\invlim{f\cup
-    g}$ with $f,g$ as defined in figure~\ref{strictsuperset} taking the
-  form of a Cantor fan; $\invlim{f}$ and $\invlim{g}$ shown in red}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=6in]{drawing.pdf}
-\caption[width=\textwidth]{Diagramatic illustration of 
-  \label{drawing} $\invlim{f}$, where $f(x) = \begin{cases}
-    \lbrace a\rbrace & x\neq b\\
-    \lbrace a,b\rbrace & x=b\\
-    \end{cases}$ for some $a,b\in[0,1]$, $a\neq b$}
-\end{figure}
 
 \bibliographystyle{unsrt}
 \bibliography{references}
