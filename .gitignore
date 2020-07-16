@@ -1,0 +1,19 @@
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+
+README.md~
+
+# RStudio files
+.Rproj.user/
+longcope.Rproj
+
+*.aux
+*.log
+*.out
+
+
+
+*.pdf
+*.Rout
