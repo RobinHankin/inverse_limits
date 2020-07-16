@@ -139,8 +139,10 @@ inverse limit of $f\colon X\longrightarrow \mathcal{P}(X)$ if $x_i \in
 f(x_{i+1})$ for $i = 0, 1, 2,\ldots$ and write
 $S\in\lim_{\leftarrow}f$.  Given two set-valued functions $f,g\colon X
 \rightarrow \mathcal{P}(X)$, we define set operators in the usual way,
-for example, $(f\cup g)(x) := f(x)\cup g(x)$.  We define a {\em
-  partial} function to be a (set-valued) function whose range includes
+for example, $(f\cup g)(x) := f(x)\cup g(x)$; we may also compare two
+set-valued functions, for example writing $f\subseteq g$ if
+$f(x)\subseteq g(x)\forall x\in X$.  We define a {\em partial}
+function to be a (set-valued) function whose range includes
 $\emptyset$.  Conversely, if the image of every $x\in X$ is nonempty,
 $\emptyset\not\in\operatorname{Range}(f)$, we say that $f$ is a {\em
   total} function.  Given a set-valued function $f\colon X
@@ -152,34 +154,37 @@ c,c,\ldots)$ will be denoted $a^nb^mc^\infty$.
 
 \section{Introduction}
 
-It is intuitive that when we take the union of two functions, the
-inverse limit of the resulting function is a superset of the union of
-the inverse limits of the two functions.
+We consider the set-valued functions from $X=[0,1]$ to
+$\mathcal{P}(X)$ and consider inverse limits in the sense
+of~\cite{ingram2012}.  It is intuitive that when we take the union of
+two functions, the inverse limit of the resulting function is a
+superset of the union of the inverse limits of the two functions:
 
  \begin{thm}
-The inverse limit of $f\cup g$ is a superset of the union of the inverse limits of $f$ and $g$ separately.
+The inverse limit of $f\cup g$ is a superset of the union of the
+inverse limits of $f$ and $g$ separately: $$\invlim{f} \cup \invlim{g}
+\subseteq\invlim{f\cup g}$$.
  \end{thm}
  \begin{proof}
- We are trying to show that $\invlim{f} \cup \invlim{g} \subseteq\invlim{f\cup g}$.
- Formally, if $S = (x_0 , x_1 , x_2 , \ldots)\in\invlim{f}\cup\invlim{g}$ then
- either $S\in\invlim{f}$ or $S\in\invlim{g}$. 
- Thus, for $i = 0, 1, 2,\ldots$,  $x_i\in f(x_{i+1})\cup g(x_{i+1})$.
- So $x_i \in ( f  \cup  g )(x_{i+1})$ and so $S\in\invlim{f\cup g}$.
+If $S = (x_0, x_1, x_2, \ldots)\in\invlim{f}\cup\invlim{g}$ then
+either $S\in\invlim{f}$ or $S\in\invlim{g}$.  Thus, for $i\geqslant
+0$, $x_i\in f(x_{i+1})\cup g(x_{i+1})$.  So $x_i \in ( f \cup g
+)(x_{i+1})$ and so $S\in\invlim{f\cup g}$.
  \end{proof}
 
-
- This suggests that we consider under what circumstances the inverse
+This suggests that we consider under what circumstances the inverse
 limit of the union is {\em exactly} the union of the inverse limits
 with $\invlim{f}\cup\invlim{g} = \invlim{(f\cup g)}$.  We start with
 some simple examples.
 
 \begin{exam}
 In figure~\ref{abuse}, we have $f(x)=\left\lbrace
-a\right\rbrace\,\forall x\in X$ and, with some abuse of notation,
+a\right\rbrace\,\forall x\in X$ for some $a\in X$ and, with some abuse
+of notation,
 
 \begin{equation}
   g(x) = \begin{cases}
-    a & x\leqslant a\\
+    \lbrace a\rbrace & x\leqslant a\\
     \subseteq[0,a) & x>a
     \end{cases}
 \end{equation}
@@ -188,7 +193,7 @@ a\right\rbrace\,\forall x\in X$ and, with some abuse of notation,
 
 \begin{equation}
 \invlim{f} = \invlim{g} =  \invlim{f \, \cup\, g} = \invlim{f} \,\cup\,
-\invlim{g} = (a,a,a,\ldots).
+\invlim{g} = a^\infty.
 \end{equation}
 \end{exam}
 \begin{proof}
@@ -231,7 +236,7 @@ Consider
   as shown in figure~\ref{strictly}.  Now $\invlim{f}=a^\infty$ and
   $\invlim{g}=b^\infty$, but $\invlim{f \cup g}$ is precisely
   sequences of the form $(x_0,x_1,x_2,\ldots)$ where $x_i\in\lbrace
-  a,b\rbrace$ for $i\geqslant 0$.  In particular, the inverse limit
+  a,b\rbrace$ for $i\geqslant 0$.  The inverse limit of $f\cup g$
   contains $(a,b,\ldots)$ which occurs in neither of the separate
   inverse limits.
 \end{exam}
@@ -269,7 +274,7 @@ Consider
 \begin{equation}
   f_U(x) = \begin{cases}
     \lbrace x\rbrace & x\neq a\\
-    \lbrace a\rbrace\cup U
+    \lbrace a\rbrace\cup U & x=a
   \end{cases}
 \end{equation}
 
@@ -311,10 +316,10 @@ g(x_2)$.
 \end{proof}
 
 We now consider unions of a constant function with other functions.
-Define the constant function $f_{U}(\cdot)$ by $f_U(x)=\lbrace
+Again define the constant function $f_{U}(\cdot)$ by $f_U(x)=\lbrace
 U\rbrace\,\forall x\in X$.  Here we consider unions of $f_{\lbrace
-  a\rbrace}$ for some $a\in X$ with a partial function $g$ that
-consists of just one point:
+  a\rbrace}$ for some $a\in X$ with a partial function $g$ whose graph
+$G(g)$ is a single point:
 
 \begin{equation}
   g(x) = \begin{cases}
@@ -364,9 +369,9 @@ There are three cases:
   We clearly have $\invlim{f\cup g}\supset\invlim{f}\cup\invlim{g}$.
 \end{itemize}
 
-The third case is by far the most interesting.  We note in passing
-that the inverse limit is not identical to the underlying set of the
-finitely presented group $\left\langle
+The third case is by far the most interesting (figure~\ref{drawing}).
+We note in passing that the inverse limit is not identical to the
+underlying set of the finitely presented group $\left\langle
 a,b\left|b^2=1\right.\right\rangle$, in which $a$ may have negative
 power, unlike the inverse limit in which each $b$ is separated by a
 strictly positive power of $a$.
@@ -397,9 +402,8 @@ inverse limit of $g$, for $f\cap g=\emptyset$.
 \end{proof}
 
 
-However, the converse of theorem~\ref{fish} is false.  For a
-counterexample, see figure~\ref{notyetdone}, where we take $f$ to be
-$f_{\lbrace 1\rbrace}$ and
+However, the converse of theorem~\ref{fish} is false.  For
+counterexamples we consider $f_{\lbrace 1\rbrace}$ and
 
 \begin{equation}
   g_1(x) = \begin{cases}
@@ -412,9 +416,11 @@ $f_{\lbrace 1\rbrace}$ and
     \lbrace a\rbrace & x=1
   \end{cases}
 \end{equation}
-
-for some $a\in(0,1)$.  We see that $f\cap g_{\lbrace
-  1,2\rbrace}=\emptyset$ and $\invlim{f}=1^\infty$,
+for some $a\in(0,1)$.  We see that $
+f_{\lbrace 1\rbrace}\cap g_{1}=
+f_{\lbrace 1\rbrace}\cap g_{2}
+=\emptyset$
+and $\invlim{f}=1^\infty$,
 $\invlim{g_1}=\lbrace x^\infty | 0\leqslant x< 1\rbrace$, and
 $\invlim{g_2}=\emptyset$.  Further, $\invlim{f\cup
   g_i}=\invlim{f}\cup\invlim{g_i}$ for $i=1,2$.  However, $\exists
@@ -467,13 +473,13 @@ another function.
 \begin{figure}[h]
 \centering
 \includegraphics[width=6in]{drawing.pdf}
-\caption[width=\textwidth]{Diagramatic illustration of the
-  \label{semicircle} inverse limit of
-  a function}
+\caption[width=\textwidth]{Diagramatic illustration of 
+  \label{drawing} $\invlim{f}$, where $f(x) = \begin{cases}
+    \lbrace a\rbrace & x\neq b\\
+    \lbrace a,b\rbrace & x=b\\
+    \end{cases}$ for some $a,b\in[0,1]$, $a\neq b$}
 \end{figure}
 
 \bibliographystyle{unsrt}
-\bibliography{references}  %%% Remove comment to use the external .bib file (using bibtex).
-
-
+\bibliography{references}
 \end{document}
