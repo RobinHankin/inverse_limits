@@ -13,9 +13,9 @@ ang(0)
 tex(0,expression(10^infinity),pos=4)
 tex(-pi,expression(0*1^infinity),pos=2)
 
-ang(pi/2)
-tex(pi/2,expression(1^infinity),pos=3)
-tex(-pi/2,expression(0^infinity),pos=1)
+ang(pi/2,col='red')
+tex(pi/2,expression(1^infinity),pos=3,col='red')
+tex(-pi/2,expression(0^infinity),pos=1,col='red')
 
 ang(theta=pi/6)
 tex(theta=pi/6,expression(101^infinity),pos=4)
@@ -40,6 +40,11 @@ tex(theta=3*pi/2-2*pi/18,expression(0*0*1*0^infinity),pos=1)
 ang(2*pi/18)
 tex(theta=2*pi/18,expression(1010^infinity),pos=4)
 tex(theta=pi+2*pi/18,expression(0*101^infinity),pos=2)
+
+ang(0.36,col='red')
+text(0.936,0.392,expression((10)^infinity),col='red',pos=4)
+text(-1.03,-0.352,expression((0*1)^infinity),col='red',pos=1)
+
 
 ang(pi/54)
 ang(pi/27)
