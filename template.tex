@@ -143,9 +143,7 @@ for example, $(f\cup g)(x) := f(x)\cup g(x)$.  We define a {\em
   partial} function to be a (set-valued) function whose range includes
 $\emptyset$.  Conversely, if the image of every $x\in X$ is nonempty,
 $\emptyset\not\in\operatorname{Range}(f)$, we say that $f$ is a {\em
-  total} function.  We define the {\em constant function} $f_U(\cdot)$
-to be the function with $f_U(x)=\lbrace U\rbrace\,\forall x\in X$,
-for some $U\subseteq X$.  Given a set-valued function $f\colon X
+  total} function.  Given a set-valued function $f\colon X
 \longrightarrow \mathcal{P}(X)$, we define the {\em graph} $G(f)$ of
 $f$ to be $\left\lbrace (x, y) \,|\, x\in X,y \in f(x)\right\rbrace$.
 A sequence of the form $( \underbrace{a, a,\ldots, a}_{\text{$n$
@@ -194,7 +192,7 @@ a\right\rbrace\,\forall x\in X$ and, with some abuse of notation,
 \end{equation}
 \end{exam}
 \begin{proof}
-  It is clear that $\invlim{f}=(a^\infty)$ and
+  It is clear that $\invlim{f}=a^\infty$ and
   also that $a^\infty\in\invlim{g}$.  To prove that $\invlim{f\cup g}=a^\infty$,
   we consider a sequence $(x_0,x_1,\dots)\in\invlim{f\cup g}$ and
   observe that $x_i\leqslant a$ for all $i$.  Further, if $x_i<a$,
@@ -372,7 +370,7 @@ $\forall x\in X, x\notin g(x)$.
 
 \begin{proof}
 Suppose that $G(g)$ intersects the line $x = a$ at the point $(a,x_0)$
-for some $x_0\neq a$.  Then $S=(ax_0)^\infty\in\invlim{f\cup g}$.
+for some $x_0\neq a$.  Then $S=ax_0^\infty\in\invlim{f\cup g}$.
 This is not in the inverse limit of $f$ since $\invlim{f} = a^\infty$.
 It is also not in the inverse limit of $g$, for the point for $(x_0,a)
 \in G(f)$ and $f\cap g=\emptyset$.  So $S\notin \invlim{g}$ and thus
