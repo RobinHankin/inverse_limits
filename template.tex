@@ -214,21 +214,32 @@ examples where the inverse limit of the union is a strict superset of
 the union of the inverse limits:
 
 \begin{exam}
-  In figure~\ref{strictly}, we have $f(x)=\lbrace a\rbrace$ and
-  $g(x)=\lbrace b\rbrace$ (with $a\neq b$) for $x\in[0,1]$.  Now
-  $\invlim{f}=a^\infty$ and $\invlim{b}=b^\infty$, but $\invlim{f \cup
-    g}$ is precisely sequences of the form $(x_0,x_1,x_2,\ldots)$
-  where $x_i\in\lbrace a,b\rbrace$ for $i\geqslant 0$.  In particular,
-  this point contains $(a,b,\ldots)$ which occurs in neither of the
-  separate inverse limits.
+Consider
+\begin{equation}
+  f(x) = \begin{cases}
+\lbrace a\rbrace & x\in\lbrace a,b\rbrace\\
+\emptyset & \mbox{otherwise}
+    \end{cases}\qquad
+  g(x) = \begin{cases}
+\lbrace b\rbrace & x\in\lbrace a,b\rbrace\\
+\emptyset & \mbox{otherwise}
+    \end{cases}
+\end{equation}
+
+  where we understand $a\neq b$; we could equivalently consider
+  $f(x)=\lbrace a\rbrace$ and $g(x)=\lbrace b\rbrace$ for $x\in[0,1]$,
+  as shown in figure~\ref{strictly}.  Now $\invlim{f}=a^\infty$ and
+  $\invlim{g}=b^\infty$, but $\invlim{f \cup g}$ is precisely
+  sequences of the form $(x_0,x_1,x_2,\ldots)$ where $x_i\in\lbrace
+  a,b\rbrace$ for $i\geqslant 0$.  In particular, the inverse limit
+  contains $(a,b,\ldots)$ which occurs in neither of the separate
+  inverse limits.
 \end{exam}
 
 So when is the union of the inverse limits the same as the inverse
 limit of the union?  Trivially, if we take two functions (or one
 function and a partial function) where one is a subset of the other,
-this is the case.
-
-These examples would suggest the natural conjecture that the inverse
+this is the case.  One natural conjecture would be that the inverse
 limit of the union of two {\em onto} functions would necessarily be a
 strict superset of the union of the inverse limits of the separate
 functions.  It is easy to construct such examples:
@@ -300,10 +311,10 @@ g(x_2)$.
 \end{proof}
 
 We now consider unions of a constant function with other functions.
-Recall that the constant function $f_{\lbrace U\rbrace}(\cdot)$ is
-defined by $f_U(x)=\lbrace U\rbrace\,\forall x\in X$.  Here I consider
-unions of $f_{\lbrace a\rbrace}$ for some $a\in X$ with a partial
-function $g$ that consists of just one point:
+Define the constant function $f_{U}(\cdot)$ by $f_U(x)=\lbrace
+U\rbrace\,\forall x\in X$.  Here we consider unions of $f_{\lbrace
+  a\rbrace}$ for some $a\in X$ with a partial function $g$ that
+consists of just one point:
 
 \begin{equation}
   g(x) = \begin{cases}
@@ -326,28 +337,30 @@ know that $\invlim{f_{\lbrace a\rbrace}}=a^\infty$; and
 There are three cases:
 
 \begin{itemize}
-  \item General position: $a\neq b$, $b\neq c$, $c\neq a$.  Then $\invlim{f\cup g}=a^\infty$.
-  \item $a\neq b=c$.  Then $\invlim{f\cup g}=\bigcup_{i\geqslant 0}b^na^\infty$, a convergent sequence.
-  \item $a=b\neq c$ (figure~\ref{figs567}).  Then
-    \begin{multline}
-      \invlim{f\cup g}=
-      a^\infty\cup
-      \lbrace a^nba^\infty|n\in\mathbb{N}\rbrace\\
-      \cup\lbrace a^{n_1}ba^{n_2}ba^\infty|n_1\in\mathbb{N},n_2\in\mathbb{N^+}\rbrace
-      \cup\cdots\\
-      \cdots\cup\lbrace a^{n_1}ba^{n_2}b\ldots a^{n_i}ba^\infty|n_1\in\mathbb{N},n_i\in\mathbb{N}^+,i\geqslant 2\rbrace
-      \cup\cdots
-    \end{multline}
-    Alternatively, we may write
-    \begin{multline}
-      \invlim{f\cup g}=
-      b?a^\infty\cup
-      \lbrace b?a^nba^\infty|n\in\mathbb{N^+}\rbrace\\
-      \cup\lbrace b?a^{n_1}ba^{n_2}ba^\infty|n_1,n_2\in\mathbb{N^+}\rbrace
-      \cup\cdots\\
-      \cdots\cup\lbrace b?a^{n_1}ba^{n_2}b\ldots a^{n_i}ba^\infty|n_i\in\mathbb{N}^+\rbrace\cup\cdots
-    \end{multline}
-    where ``$x?$'' is understood to be either $x^0$ or $x^1$, as in regexp terminology.
+\item General position: $a\neq b$, $b\neq c$, $c\neq a$.  Then
+  $\invlim{f\cup g}=a^\infty$.
+\item $a\neq b=c$.  Then $\invlim{f\cup g}=\bigcup_{i\geqslant
+  0}b^na^\infty$, a convergent sequence.
+\item $a=b\neq c$.  Then
+  \begin{multline}
+    \invlim{f\cup g}=
+    a^\infty\cup
+    \lbrace a^nba^\infty|n\in\mathbb{N}\rbrace\\
+    \cup\lbrace a^{n_1}ba^{n_2}ba^\infty|n_1\in\mathbb{N},n_2\in\mathbb{N^+}\rbrace
+    \cup\cdots\\
+    \cdots\cup\lbrace a^{n_1}ba^{n_2}b\ldots a^{n_i}ba^\infty|n_1\in\mathbb{N},n_i\in\mathbb{N}^+,i\geqslant 2\rbrace
+    \cup\cdots
+  \end{multline}
+  Alternatively, we may write
+  \begin{multline}
+    \invlim{f\cup g}=
+    b?a^\infty\cup
+    \lbrace b?a^nba^\infty|n\in\mathbb{N^+}\rbrace\\
+    \cup\lbrace b?a^{n_1}ba^{n_2}ba^\infty|n_1,n_2\in\mathbb{N^+}\rbrace
+    \cup\cdots\\
+    \cdots\cup\lbrace b?a^{n_1}ba^{n_2}b\ldots a^{n_i}ba^\infty|n_i\in\mathbb{N}^+\rbrace\cup\cdots
+  \end{multline}
+  where ``$x?$'' is understood to be either $x^0$ or $x^1$, as in regexp terminology.
   We clearly have $\invlim{f\cup g}\supset\invlim{f}\cup\invlim{g}$.
 \end{itemize}
 
@@ -361,23 +374,23 @@ strictly positive power of $a$.
 \newcommand{\fa}{f_{\lbrace a\rbrace}}
 
 \begin{thm}\label{fish}
-Consider the function $\fa$ for some $a\in X$.
-Suppose $g$ is a set valued function such that $\fa\cap g=\emptyset$ and
-$\invlim{\fa}\cup\invlim{g} = \invlim{\fa\cup g}$.  Then $G(g)$ must not
+Consider the function $\fa$ for some $a\in X$.  Suppose $g$ is a set
+valued function such that $\fa\cap g=\emptyset$.  If
+$\invlim{\fa}\cup\invlim{g} = \invlim{\fa\cup g}$ then $G(g)$ cannot
 intersect the lines $x = a$ or $y = x$, that is, $g(a)=\emptyset$, and
 $\forall x\in X, x\notin g(x)$.
 \end{thm}
 
 \begin{proof}
 Suppose that $G(g)$ intersects the line $x = a$ at the point $(a,x_0)$
-for some $x_0\neq a$.  Then $S=ax_0^\infty\in\invlim{f\cup g}$.
-This is not in the inverse limit of $f$ since $\invlim{f} = a^\infty$.
-It is also not in the inverse limit of $g$, for the point for $(x_0,a)
-\in G(f)$ and $f\cap g=\emptyset$.  So $S\notin \invlim{g}$ and thus
-$\invlim{f}\cup\invlim{g}$ is a strict subset of $\invlim{f\cup g}$.
+for some $x_0\neq a$.  Then $S=ax_0^\infty\in\invlim{f\cup g}$.  This
+is not in the inverse limit of $f$ since $\invlim{f} = a^\infty$.  It
+is also not in the inverse limit of $g$, as $(x_0,a) \in G(f)$, but
+$f\cap g=\emptyset$.  So $S\in\invlim{f\cup
+  g}\backslash\invlim{f}\cup\invlim{g}$, a contradiction.
 
 Now suppose that $G(g)$ intersects the (diagonal) line $y = x$ at the
-point $(x_0,x_0)$ for some $x_0\neq a$; that is, $x_0\in f(x_0)$.
+point $(x_0,x_0)$ for some $x_0\neq a$; that is, $x_0\in g(x_0)$.
 Then $ax_0^\infty\in \invlim{f\cup g}$.  This is not in the inverse
 limit of $f$ since $\invlim{f} = a^\infty$.  It is also not in the
 inverse limit of $g$, for $f\cap g=\emptyset$.  
