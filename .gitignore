@@ -13,9 +13,11 @@ longcope.Rproj
 
 *.aux
 *.log
+*.bbl
 *.out
+*.blg
 
-
+*~
 
 *.pdf
 *.Rout
