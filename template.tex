@@ -59,7 +59,8 @@
 %\date{September 9, 1985}	% Here you can change the date presented in the paper title
 %\date{} 					% Or removing it
 
-\author{{\includegraphics[scale=0.06]{orcid.png}\hspace{1mm}A. M.~Hankin}
+\author{{\includegraphics[scale=0.06]{orcid.png}\hspace{1mm}A. M.~Hankin}\\
+  The University of Auckland
 	%% examples of more authors
 	\And 
 	\href{https://orcid.org/0000-0001-5982-0415}{\includegraphics[scale=0.06]{orcid.png}\hspace{1mm}Robin K. S.~Hankin} \\
@@ -107,10 +108,10 @@ pdfkeywords={Inverse limits},
 \newcommand{\invlim}[1]{\lim_{\leftarrow} #1}
 
 \begin{abstract}
-We consider set-valued functions from $X=\left[0,1\right]$ to $2^X$
-and say that $S = (x_0 , x_1 , x_2 , \ldots)$ is a member of the
-inverse limit $\invlim{f}$ of $f\colon X\longrightarrow 2^X$ if $x_i
-\in f(x_{i+1})$ for $i = 0, 1, 2, \ldots$.  Given nonempty set-valued
+We consider set-valued functions from $X=\left[0,1\right]$ to the
+power set $\mathcal{P}(X)$ of $X$ and say that $S = (x_0,x_1,
+x_2,\ldots)$ is a member of the inverse limit $\invlim{f}$ of $f$ if
+$x_i\in f(x_{i+1})$ for $i = 0,1,2,\ldots$.  Given nonempty set-valued
 functions $f,g$ with $f$ being onto $X$ (that is, $\forall y\in X,
 \exists x\in X\colon y\in f(x)$) and empty intersection (that is,
 $\operatorname{Im}(f)\cap\operatorname{Im}(g) = \emptyset$), we prove
@@ -125,10 +126,7 @@ $\operatorname{Idem}(g)=\left\lbrace x\colon x\in g(x)\right\rbrace$
 is the single element set $\left\lbrace a\right\rbrace$.
 \end{abstract}
 
-
-% keywords can be removed
-\keywords{First keyword \and Second keyword \and More}
-
+\keywords{Set-valued functions \and Inverse limits \and Set union}
 
 \section{Definitions}
 
