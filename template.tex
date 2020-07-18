@@ -121,7 +121,7 @@ nonintersecting $f,g$, if $\operatorname{Im}(f)=\left\lbrace
 a\right\rbrace$ for some $a\in X$ and $\invlim{f\cup g} =
 \invlim{f}\cup\invlim{g$}, then the preimage $g^{-1}(a)=\left\lbrace
 a\right\rbrace$.  Further, the idempotence set
-$\operatorname{Idem}(f)=\left\lbrace x\colon x\in g(x)\right\rbrace$
+$\operatorname{Idem}(g)=\left\lbrace x\colon x\in g(x)\right\rbrace$
 is the single element set $\left\lbrace a\right\rbrace$.
 \end{abstract}
 
@@ -156,9 +156,10 @@ c,c,\ldots)$ will be denoted $a^nb^mc^\infty$.
 
 We consider the set-valued functions from $X=[0,1]$ to
 $\mathcal{P}(X)$ and consider inverse limits in the sense
-of~\cite{ingram2012}.  It is intuitive that when we take the union of
-two functions, the inverse limit of the resulting function is a
-superset of the union of the inverse limits of the two functions:
+of~\cite{ingram2012,ingram2012a}.  It is intuitive that when we take
+the union of two functions, the inverse limit of the resulting
+function is a superset of the union of the inverse limits of the two
+functions:
 
  \begin{thm}
 The inverse limit of $f\cup g$ is a superset of the union of the
@@ -421,8 +422,10 @@ strictly positive power of $a$.
 Consider the function $\fa$ for some $a\in X$.  Suppose $g$ is a set
 valued function such that $\fa\cap g=\emptyset$.  If
 $\invlim{\fa}\cup\invlim{g} = \invlim{\fa\cup g}$ then $G(g)$ cannot
-intersect the lines $x = a$ or $y = x$, that is, $g(a)=\emptyset$, and
-$\forall x\in X, x\notin g(x)$.
+intersect the lines $x=a$ or $y=x$.  That is, $g(a)=\emptyset$, and
+$\forall x\in X, x\notin g(x)$; the idempotence set
+$\operatorname{Idem}(g)=\left\lbrace x\colon x\in g(x)\right\rbrace$
+is the single element set $\left\lbrace a\right\rbrace$.
 \end{thm}
 
 \begin{proof}
@@ -469,16 +472,19 @@ theorem~\ref{fish}.
 
 \section{Discussion}
 
-Characterising the inverse limits of unions of functions is complex.
-We have presented some simple preliminary results regarding constant
-and onto functions as well as several examples of functions for which
-the inverse limit of the union is exactly equal to the union of the
-inverse limits of the functions, and other examples for which it is a
-strict superset.  However, there is still much to understand.  It
-might be interesting to consider other properties of functions (for
-example upper or lower semicontinuity) that give information about the
-inverse limit of the union of a function with that property and
-another function.
+Characterising the inverse limits of unions of functions appears to be
+difficult.  We have presented some simple preliminary results
+regarding constant and onto functions as well as several examples of
+functions for which the inverse limit of the union is exactly equal to
+the union of the inverse limits of the functions, and other examples
+for which it is a strict superset.  It might be interesting to
+consider other properties of functions (for example upper or lower
+semicontinuity) that give information about the inverse limit of the
+union of a function with that property and another function.
+
+\subsection*{Acknowledgements}
+We would like to thank Sina Greenwood and Michael Lockyer for
+stimulating discussion and advice.
 
 \bibliographystyle{unsrt}
 \bibliography{references}
