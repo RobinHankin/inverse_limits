@@ -113,10 +113,9 @@ power set $\mathcal{P}(X)$ of $X$ and say that $S = (x_0,x_1,
 x_2,\ldots)$ is a member of the inverse limit $\invlim{f}$ of $f$ if
 $x_i\in f(x_{i+1})$ for $i = 0,1,2,\ldots$.  Given nonempty set-valued
 functions $f,g$ with $f$ being onto $X$ (that is, $\forall y\in X,
-\exists x\in X\colon y\in f(x)$) and empty intersection (that is,
-$\operatorname{Im}(f)\cap\operatorname{Im}(g) = \emptyset$), we prove
-that the inverse limit of $f\cup g$ is a strict superset of the union
-of the separate inverse limits: $\invlim{f\cap g}
+\exists x\in X\colon y\in f(x)$) and empty intersection $f\cap g$, we
+prove that the inverse limit of $f\cup g$ is a strict superset of the
+union of the separate inverse limits: $\invlim{f\cap g}
 \supset\invlim{f}\cup\invlim{g}$.  We prove a partial converse: for
 nonintersecting $f,g$, if $\operatorname{Im}(f)=\left\lbrace
 a\right\rbrace$ for some $a\in X$ and $\invlim{f\cup g} =
@@ -162,7 +161,7 @@ functions:
  \begin{thm}
 The inverse limit of $f\cup g$ is a superset of the union of the
 inverse limits of $f$ and $g$ separately: $$\invlim{f} \cup \invlim{g}
-\subseteq\invlim{f\cup g}$$.
+\subseteq\invlim{f\cup g}.$$
  \end{thm}
  \begin{proof}
 If $S = (x_0, x_1, x_2, \ldots)\in\invlim{f}\cup\invlim{g}$ then
@@ -312,17 +311,17 @@ u^na^\infty\colon u\in U, n\in\mathbb{N}\rbrace$, and also
   \bigcup_{i\in I}\invlim{f_{U_i}}=
   \invlim{\bigcup_{i\in I}f_{U_i}}=
   \lbrace x^\infty\colon x\in X\rbrace\cup\lbrace
-  u^na^\infty\colon u\in\bigcup_{i\in I}U_i, n\in\mathbb{N}\rbrace.
+  u^na^\infty\colon u\in\bigcup_{i\in I}U_i, n\in\mathbb{N}\rbrace,
 \end{equation}
 \end{exam}
 
-In this case we observe that there is a significant intersection
-between the $f_{U_i}$ and indeed $\bigcap_{i\in I}f_{U_i}\supseteq
-f\colon x\longrightarrow\lbrace x\rbrace$.  This suggests that pairs
-of functions with large overlap (in some sense) have small
-$\invlim{f\cup g}\backslash\left(\invlim{f}\cup\invlim{g}\right)$ (in
-some sense).  We can formalise a weak version of this suggestion as
-follows:
+where $I$ is some index set.  In this case we observe that there is a
+significant intersection between the $f_{U_i}$ and indeed
+$\bigcap_{i\in I}f_{U_i}\supseteq f\colon x\longrightarrow\lbrace
+x\rbrace$.  This suggests that pairs of functions with large overlap
+(in some sense) have small $\invlim{f\cup
+  g}\backslash\left(\invlim{f}\cup\invlim{g}\right)$ (in some sense).
+We can formalise a weak version of this suggestion as follows:
 
 \begin{thm}
 If $f$ is onto, $\operatorname{Im}(g)\neq\emptyset$, and $f\cap
@@ -342,8 +341,8 @@ g(x_2)$.
 \end{proof}
 
 We now consider unions of a constant function with other functions.
-Again define the constant function $f_{U}(\cdot)$ by $f_U(x)=\lbrace
-U\rbrace\,\forall x\in X$.  Here we consider unions of $f_{\lbrace
+Again define the constant function $f_{U}(\cdot)$ by
+$f_U(x)=U\,\forall x\in X$.  Here we consider unions of $f=f_{\lbrace
   a\rbrace}$ for some $a\in X$ with a partial function $g$ whose graph
 $G(g)$ is a single point:
 
@@ -370,7 +369,7 @@ There are three cases:
 \begin{itemize}
 \item General position: $a\neq b$, $b\neq c$, $c\neq a$.  Then
   $\invlim{f\cup g}=a^\infty$.
-\item $a\neq b=c$.  Then $\invlim{f\cup g}=\bigcup_{i\geqslant
+\item $a\neq b=c$.  Then $\invlim{f\cup g}=\bigcup_{n\geqslant
   0}b^na^\infty$, a convergent sequence.
 \item $a=b\neq c$.  Then
   \begin{multline}
