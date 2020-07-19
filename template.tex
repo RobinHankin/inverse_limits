@@ -293,32 +293,34 @@ However, it is possible to construct sets of onto functions for which
 the inverse limit of the union is exactly equal to the union of the
 inverse limits:
 
+\newcommand{\ft}[1]{\tilde{f}_{#1}}
+
 \begin{exam}
 Consider
 
 \begin{equation}
-  f_U(x) = \begin{cases}
+  \ft{U}(x) = \begin{cases}
     \lbrace x\rbrace & x\neq a\\
     \lbrace a\rbrace\cup U & x=a
   \end{cases}
 \end{equation}
 
 where $U\subseteq X$ is any subset of $X=[0,1]$ and $a\in X$.  Here we
-have $\invlim{f_U}=\lbrace x^\infty\colon x\in X\rbrace\cup\lbrace
+have $\invlim{\ft{U}}=\lbrace x^\infty\colon x\in X\rbrace\cup\lbrace
 u^na^\infty\colon u\in U, n\in\mathbb{N}\rbrace$, and also
 
 \begin{equation}
-  \bigcup_{i\in I}\invlim{f_{U_i}}=
-  \invlim{\bigcup_{i\in I}f_{U_i}}=
+  \bigcup_{i\in I}\invlim{\ft{U_i}}=
+  \invlim{\bigcup_{i\in I}\ft{U_i}}=
   \lbrace x^\infty\colon x\in X\rbrace\cup\lbrace
   u^na^\infty\colon u\in\bigcup_{i\in I}U_i, n\in\mathbb{N}\rbrace,
 \end{equation}
 \end{exam}
 
 where $I$ is some index set.  In this case we observe that there is a
-significant intersection between the $f_{U_i}$ and indeed
-$\bigcap_{i\in I}f_{U_i}\supseteq f\colon x\longrightarrow\lbrace
-x\rbrace$.  This suggests that pairs of functions with large overlap
+significant intersection between the $\ft{U_i}$ and indeed
+$\bigcap_{i\in I}\ft{U_i}\supseteq\ft{\emptyset}\colon x\longrightarrow\lbrace
+x\rbrace$.  This suggests that pairs of functions $f,g$ with large overlap
 (in some sense) have small $\invlim{f\cup
   g}\backslash\left(\invlim{f}\cup\invlim{g}\right)$ (in some sense).
 We can formalise a weak version of this suggestion as follows:
